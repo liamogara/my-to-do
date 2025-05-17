@@ -76,7 +76,7 @@ MyToDo is a full-featured to-do list web application built with **Node.js**, **E
    SESSION_SECRET=yourStrongSecretKey
    ```
 
-4. (Optional) If using a starter database, rename it to `myToDo.db` or adjust the filename in `server.js`.
+4. (Optional) If using a different database, rename it to `myToDo.db` or adjust the filename in `server.js`.
 
 5. Start the server:
 
@@ -101,22 +101,6 @@ MyToDo is a full-featured to-do list web application built with **Node.js**, **E
 ├── .env                  # Environment variables (not committed)
 ├── .gitignore            # Git ignore rules
 ```
-
-## 🔒 Security Notes
-
-* Do **not** commit your `.env` file or production database.
-* If deploying this app publicly, use HTTPS and production-ready configurations.
-
-## 🧪 Future Improvements (Optional)
-
-* User email verification
-* Dark mode toggle
-* Task prioritization or categories
-* Full mobile responsiveness
-
-## 🐛 Bugs or Suggestions?
-
-Open an [issue](https://github.com/your-username/mytodo-app/issues) or submit a pull request!
 
 ## 📜 License
 
