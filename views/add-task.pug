@@ -1,0 +1,119 @@
+doctype html
+html(lang="en")
+  head
+    meta(
+      content="initial-scale=1.0, width=device-width" 
+      name="viewport"
+      )
+    meta(charset="utf-8")
+    link(
+      rel="stylesheet" 
+      href="css/styles.css"
+      )
+    link(
+      href="/img/favicon.ico" 
+      type="image/x-icon" 
+      rel="icon"
+      )
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(
+      defer="" 
+      src="js/add.js"
+      )
+    title MyToDo - Add Task
+  body
+    .navBar
+      nav
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span
+            img(
+              src="img/checklist.png" 
+              alt="List icon"
+              )
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span To-Do List
+          span
+            img(
+              src="img/clipboard.png" 
+              alt="List icon"
+              )
+        a(href="add-task")
+          span Add Task
+          span
+            img(
+              src="img/write.png" 
+              alt="Write icon"
+              )
+        a#userSettings(href="user-settings")
+          span User
+          span
+            img(
+              src="img/user.png" 
+              alt="User icon"
+              )
+    h1 Add Task
+    .controlsContainer
+      .controlButton
+        button#backButton(type="button")
+          | Back To To-Do List
+          img(
+            src="../img/back.png" 
+            alt="Back button icon"
+            )
+    .flexContainer
+      .formContainer
+        .formHead
+          button.buttonDelete(type="button")
+            img(
+              src="/img/close.png" 
+              alt="Close icon"
+              )
+        form#addForm(
+          action="/add-task" 
+          method="post" 
+          name="addForm"
+          )
+          .formBody
+            p
+              label(for="task") Task:
+              input#task( 
+                required="" 
+                type="text" 
+                name="task"
+                )
+            p
+              label(for="date") Date:
+              input#date(
+                required="" 
+                type="date" 
+                name="date"
+                )
+            p
+              label(for="time") Time:
+              input#time(
+                required="" 
+                type="time" 
+                name="time"
+                )
+            .descriptionArea
+              label(for="description") Description:
+              textarea#description(
+                name="description" 
+                cols="50" 
+                rows="15"
+                )
+          .formFoot
+            input(
+              value="Add" 
+              type="submit"
+              )
+            input(
+              value="Clear" 
+              type="reset"
+              )

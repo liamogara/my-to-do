@@ -1,0 +1,115 @@
+doctype html
+html(lang="en")
+  head
+    meta(
+      content="initial-scale=1.0, width=device-width" 
+      name="viewport"
+      )
+    meta(charset="utf-8")
+    link(
+      rel="stylesheet" 
+      href="../css/styles.css"
+      )
+    link(
+        rel="icon" 
+        type="image/x-icon" 
+        href="/img/favicon.ico"
+        )
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(type="module" src="../js/details.js" defer)
+    script.
+        let taskId = #{id};
+    title MyToDo - Task Details
+  body
+    .navBar
+        nav
+            a(href="../todo")
+                span
+                    img(
+                    src="../img/checklist.png" 
+                    alt="List icon"
+                    )
+            a(href="../todo")
+                span To-Do List
+                span
+                    img(
+                    src="../img/clipboard.png" 
+                    alt="List icon"
+                    )
+            a(
+            href="../add-task"
+            target="_self"
+            )
+                span Add Task
+                span
+                    img(
+                    src="../img/write.png" 
+                    alt="Write icon"
+                    )
+    h1 Task Details
+    .controlsContainer
+      .controlButton
+         button#backButton(type=button) Back To To-Do List
+            img(alt="Back button icon" src="../img/back.png")
+    div#detailsFlexContainer(class="flexContainer")
+        .detailsContainer
+            .detailsHead
+                .statusSelect
+                    select#status(
+                        required="" 
+                        name="status"
+                        )
+                        option(value="New" selected= status=="New") New
+                        option(value="Active" selected= status=="Active") Active
+                        option(value="Done" selected= status=="Done") Done
+                    button#saveStatus(type="button" class="saveButton")
+                        img(
+                            src="../img/diskette.png" 
+                            alt="Save button icon"
+                        )
+                div
+                    button.buttonDelete(type="button")
+                        img(src="../img/close.png")
+            .detailsBody
+                p
+                    label(for="task") Task:
+                p#task( 
+                    name="task"
+                    ) #{task}
+                p
+                    label(for="date") Date:
+                p#date(  
+                    name="date"
+                    ) #{date}
+                p
+                    label(for="time") Time:
+                p#time( 
+                    name="time"
+                    ) #{time}
+                .descriptionArea
+                    label(for="description") Description:
+                    textarea#description(
+                        cols="50" 
+                        rows="15"
+                        name="description"
+                        ) #{description}
+                    button#saveDescription(
+                        type="button"
+                        class="saveButton"
+                        ) Save Description
+                        img(alt="Save button icon" src="../img/diskette.png")
+        .commentsContainer
+            #addComment
+                h2 Comments:
+                textarea#comment(
+                    cols="50" 
+                    rows="15"
+                    name="comment"
+                    placeholder="Leave a comment..."
+                    ) #{comment}
+                button#addCommentButton(
+                    type="button"
+                    class="submitButton"
+                    ) Add Comment
+                    img(alt="Comment button icon" src="../img/comment.png")
+            #commentsSection

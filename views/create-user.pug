@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+  head
+    meta(
+      content="initial-scale=1.0, width=device-width" 
+      name="viewport"
+      )
+    meta(charset="utf-8")
+    link(
+      rel="stylesheet" 
+      href="css/styles.css"
+      )
+    link(
+      href="/img/favicon.ico" 
+      type="image/x-icon" 
+      rel="icon"
+      )
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(
+      defer="" 
+      src="js/createUser.js"
+      )
+    title MyToDo - Create User
+  body
+    .navBar
+      nav
+        a(
+          target="_self" 
+          href="login"
+          )
+          span
+            img(
+              src="img/checklist.png" 
+              alt="List icon"
+              )
+    h1 Create User
+    .controlsContainer
+      .controlButton
+        button#backButton(type="button")
+          | Back To Login
+          img(
+            src="../img/back.png" 
+            alt="Back button icon"
+            )
+    .flexContainer
+      .createForm
+        p#errorMessage
+        h2 Enter New User Details:
+        form#createUserForm(
+          action="/create-user" 
+          method="post" 
+          name="createUserForm"
+          )
+          p
+            label(for="username") Username:
+            input#username(
+              placeholder="Enter Username" 
+              name="username" 
+              type="text"
+              )
+          p
+            label(for="password") Password:
+            input#password(
+              placeholder="Enter Password" 
+              name="password" 
+              type="password"
+              )
+            input#passwordConfirm(
+              placeholder="Confirm Password" 
+              name="passwordConfirm" 
+              type="password"
+              )
+          div
+            button#createUserButton.submitButton(type="button")
+              | Create User
+              img(
+                src="img/create.png" 
+                alt="Create User icon"
+                )
+            button#clearButton.submitButton(type="button")
+              | Clear Input
+              img(
+                src="img/close.png" 
+                alt="Create User icon"
+                )

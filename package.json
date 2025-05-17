@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "pug": "^3.0.3",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module",
+  "name": "mytodo",
+  "version": "1.0.0",
+  "description": "MyToDo is a full-featured to-do list web application built with **Node.js**, **Express**, **SQLite**, and **Pug**. It supports user authentication, task management, filtering by status, detailed task descriptions, and user-added comments — all within a session-based system.",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Liam O'Gara",
+  "license": "MIT"
+}

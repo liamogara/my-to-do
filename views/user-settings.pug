@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    meta(
+      content="initial-scale=1.0, width=device-width" 
+      name="viewport"
+      )
+    meta(charset="utf-8")
+    link(
+      rel="stylesheet" 
+      href="css/styles.css"
+      )
+    link(
+      href="/img/favicon.ico" 
+      type="image/x-icon" 
+      rel="icon"
+      )
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(
+      defer="" 
+      src="js/settings.js"
+      )
+    title MyToDo - User Settings
+  body
+    .navBar
+      nav
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span
+            img(
+              src="img/checklist.png" 
+              alt="List icon"
+              )
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span To-Do List
+          span
+            img(
+              src="img/clipboard.png" 
+              alt="List icon"
+              )
+        a(href="add-task")
+          span Add Task
+          span
+            img(
+              src="img/write.png" 
+              alt="Write icon"
+              )
+        a#userSettings(href="user-settings")
+          span User
+          span
+            img(
+              src="img/user.png" 
+              alt="User icon"
+              )
+    h1 User Settings
+    .controlsContainer
+      .controlButton
+        button#backButton(type="button")
+          | Back To To-Do List
+          img(
+            src="img/back.png" 
+            alt="Back button icon"
+            )
+    #toDoList.flexContainer
+      .settingsContainer
+        button#logoutButton.submitButton(type="button")
+          | Logout
+          img(
+            src="img/logout.png" 
+            alt="Logout icon"
+            )
+        button#deleteUserButton.submitButton(type="button")
+          | Delete User Account
+          img(
+            src="img/delete.png" 
+            alt="Delete User icon"
+            )

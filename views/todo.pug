@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+  head
+    meta(
+      content="initial-scale=1.0, width=device-width" 
+      name="viewport"
+      )
+    meta(charset="utf-8")
+    link(
+      rel="stylesheet" 
+      href="css/styles.css"
+      )
+    link(
+      href="/img/favicon.ico" 
+      type="image/x-icon" 
+      rel="icon"
+      )
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(
+      defer="" 
+      src="js/todo.js" 
+      type="module"
+      )
+    title MyToDo - To-Do List
+  body
+    .navBar
+      nav
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span
+            img(
+              src="img/checklist.png" 
+              alt="List icon"
+              )
+        a(
+          target="_self" 
+          href="todo"
+          )
+          span To-Do List
+          span
+            img(
+              src="img/clipboard.png" 
+              alt="List icon"
+              )
+        a(href="add-task")
+          span Add Task
+          span
+            img(
+              src="img/write.png" 
+              alt="Write icon"
+              )
+        a#userSettings(href="user-settings")
+          span User
+          span
+            img(
+              src="img/user.png" 
+              alt="User icon"
+              )
+    h1 To-Do List
+    .controlsContainer
+      .controlButton
+        select#statusFilter(name="statusFilter")
+          option(value="") No Filter
+          option(value="New") New
+          option(value="Active") Active
+          option(value="Done") Done
+        button#filterButton(type="button")
+          img(
+            src="img/filter.png" 
+            alt="Filter button icon"
+            )
+    #toDoList.flexContainer

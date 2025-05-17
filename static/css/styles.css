@@ -1,0 +1,652 @@
+body {
+    background: #0d1117;
+}
+
+* {
+    font-family: arial, sans-serif;
+}
+
+.navBar {
+    background: #161b22;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.644);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: #ecf2f8;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #006600;
+}
+
+nav span {
+    margin: 4px
+}
+
+#userSettings {
+    margin-left: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ecf2f8
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    border-radius: 10px;
+    border: none;
+    background: #0059ff;
+    color: #ecf2f8;
+    font-size: 19px;
+    margin: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background: #003eb3;
+}
+
+.submitButton img {
+    margin-left: 4px;
+}
+
+.flexContainer {
+    background: #21262d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.644);
+}
+
+#detailsFlexContainer {
+    align-items: start;
+}
+
+.controlsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controlsContainer .controlButton {
+    display: flex;
+    justify-content: center;
+    min-width: 50%;
+}
+
+.controlsContainer select {
+    box-sizing: border-box;
+    background: #161b22;
+    color: #ecf2f8;
+    font-size: 19px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 0%;
+    border-color: transparent;
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+
+.controlsContainer select:focus {
+    border-color: #faa356;
+}
+
+.controlsContainer select:focus * {
+    color: #faa356;
+}
+
+.controlButton button {
+    display: block;
+    color: #ecf2f8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#toDoList {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.taskContainer {
+    background: #7ce38b;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    margin: 1em;
+    min-width: 20%;
+    width: 20%;
+}
+
+.taskHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskHead .statusSelect {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.taskHead select {
+    box-sizing: border-box;
+    background: #161b22;
+    color: #ecf2f8;
+    font-size: 14px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 0%;
+    border-color: transparent;
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+
+.taskHead select:focus {
+    border-color: #faa356;
+}
+
+.taskHead select:focus * {
+    color: #faa356;
+}
+
+.taskHead button {
+    display: block;
+    color: #ecf2f8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.taskHead img {
+    width: 100%;
+}
+
+.taskBody {
+    display: inline-block;
+    text-align: center;
+    width: 100%
+}
+
+.taskBody p {
+    font: 19px 'Comic Sans MS';
+}
+
+.taskFoot {
+    display: flex;
+    justify-content: center;
+}
+
+.taskFoot button {
+    min-width: 40%;
+    color: #ecf2f8;
+    font-size: 14px;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#filterButton {
+    background: #161b22;
+    margin-left: 4px;
+}
+
+#filterButton:hover {
+    background: #006600;
+}
+
+#backButton {
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 19px;
+    color: #ecf2f8;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #161b22;
+}
+
+#backButton:hover {
+    background: #006600;
+}
+
+#backButton img {
+    margin-left: 4px;
+}
+
+.buttonDetails {
+    background: #006600;
+    color: #ecf2f8;
+}
+
+.buttonDetails:hover {
+    background: #004400;
+}
+
+.buttonDelete {
+    background: #161b22;
+    color: #ecf2f8;
+}
+
+.buttonDelete:hover {
+    background: #fa7970;
+}
+
+.saveButton {
+    background: #006600;
+    visibility: hidden;
+    margin-left: 4px;
+}
+
+.saveButton:hover {
+    background: #004400;
+}
+
+#saveDescription {
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 19px;
+    color: #ecf2f8;
+    padding: 14px 16px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.deleteCommentButton {
+    background: #161b22;
+    color: #ecf2f8;
+}
+
+.deleteCommentButton:hover {
+    background: #fa7970;
+}
+
+#createUserButton {
+    background: #006600;
+}
+
+#createUserButton:hover {
+    background: #004400;
+}
+
+
+#deleteUserButton {
+    background: #c00000;
+}
+
+#deleteUserButton:hover {
+    background: #960000;
+}
+
+.formContainer {
+    background: #7ce38b;
+    margin: 1em;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    width: 30%;
+}
+
+.formHead {
+    display: flex;
+    justify-content: end;
+}
+
+.formHead button {
+    display: block;
+    color: #ecf2f8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formHead img {
+    width: 100%;
+}
+
+.formBody {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.formBody * {
+    font: 19px 'Comic Sans MS';
+}
+
+.formBody label {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.formBody input[type=text],
+input[type=time],
+input[type=date]{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+
+.formBody .descriptionArea {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formBody .descriptionArea textarea {
+    width: 100%;
+    height: 125px;
+    font-size: 19px;
+    resize: none;
+    border: none;
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, #FFF, #FFF 10px, transparent 10px),
+        linear-gradient(to left, #FFF, #FFF 10px, transparent 10px),
+        repeating-linear-gradient(#FFF,
+            #FFF 36px,
+            #CCC 36px,
+            #CCC 38px);
+    line-height: 38px;
+}
+
+.formFoot {
+    display: flex;
+    justify-content: center;
+}
+
+.formFoot input[type=submit],
+input[type=reset] {
+    width: 50%;
+    background-color: #006600;
+    color: #ecf2f8;
+    font-size: 19px;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.formFoot input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #004400;
+}
+
+.detailsContainer {
+    background: #7ce38b;
+    margin: 1em;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    width: 30%;
+}
+
+.detailsHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailsHead .statusSelect {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.detailsHead select {
+    box-sizing: border-box;
+    background-color: #161b22;
+    color: #ecf2f8;
+    font-size: 19px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 0%;
+    border-color: transparent;
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+
+.detailsHead select:focus {
+    border-color: #faa356;
+    color: #faa356;
+}
+
+.detailsHead button {
+    display: block;
+    color: #ecf2f8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.detailsHead img {
+    width: 100%;
+}
+
+.detailsBody {
+    padding: 1em;
+}
+
+.detailsBody * {
+    font: 19px 'Comic Sans MS';
+}
+
+.detailsBody label {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.detailsBody .descriptionArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailsBody .descriptionArea textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 19px;
+    resize: none;
+    border: none;
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, #FFF, #FFF 10px, transparent 10px),
+        linear-gradient(to left, #FFF, #FFF 10px, transparent 10px),
+        repeating-linear-gradient(#FFF,
+            #FFF 36px,
+            #CCC 36px,
+            #CCC 38px);
+    line-height: 38px;
+}
+
+.detailsBody .descriptionArea button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: arial, sans-serif;
+    color: #ecf2f8;
+    border: none;
+    cursor: pointer;
+    float: left;
+    font-size: 19px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.detailsBody .descriptionArea button img {
+    margin-left: 4px;
+}
+
+.commentsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+.commentsContainer * {
+    color: #ecf2f8;
+}
+
+#addComment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#addComment textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 19px;
+    background: #161b22;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#commentsSection {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.comment {
+    background: #161b22;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1em;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.commentHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentHead .commentDate {
+    font-size: 19px;
+    padding: 10px
+}
+
+.commentHead button {
+    display: block;
+    border: none;
+    padding: 10px;
+    border-radius: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.commentHead img {
+    width: 100%;
+}
+
+.commentBody {
+    background: #21262d;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.commentBody p {
+    word-wrap: break-word;
+    text-align: left;
+    
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #ecf2f8;
+}
+
+.loginForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm p {
+    position: relative;
+    margin: 1em;
+}
+
+.loginForm p input {
+    padding: 0.8rem;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #ecf2f8;
+}
+
+.createForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.createForm p {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1em;
+}
+
+.createForm p input {
+    padding: 0.8rem;
+}
+
+#errorMessage {
+    color: #fa7970;
+}
+
+.settingsContainer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #ecf2f8;
+}
+
+.settingsContainer h2 {
+    color: #fa7970;
+}
